@@ -8,6 +8,12 @@ test("landing page sections and media render", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "dignified life",
   );
+  await expect(
+    page.getByRole("navigation", { name: "Primary" }).getByRole("link", {
+      name: "Home",
+      exact: true,
+    }),
+  ).toBeVisible();
   for (const id of [
     "about",
     "programmes",
