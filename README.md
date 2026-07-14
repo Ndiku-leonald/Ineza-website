@@ -1,4 +1,4 @@
-# Ineza Refugees Initiative landing page
+# Ineza Refugees Initiative website
 
 Premium single-page stakeholder-review website for IRI, built with Vite, React, strict TypeScript, Tailwind CSS and Lucide icons.
 
