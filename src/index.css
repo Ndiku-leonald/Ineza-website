@@ -127,6 +127,20 @@ button:focus-visible {
   transform: translate3d(var(--mx), var(--my), 0);
   transition: transform 0.5s var(--ease);
 }
+.hero-organisation,
+.hero-promise {
+  display: block;
+}
+.hero-organisation {
+  margin-bottom: 0.8rem;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.78rem, 1.3vw, 0.95rem);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
 .floating-nav {
   position: absolute;
   top: 1.25rem;
@@ -977,7 +991,11 @@ footer {
   height: 100%;
   object-fit: contain;
   object-position: center;
-  background: linear-gradient(180deg, rgba(7, 31, 25, 0.18), rgba(7, 31, 25, 0.62));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 31, 25, 0.18),
+    rgba(7, 31, 25, 0.62)
+  );
 }
 .interior-header::after {
   content: "";

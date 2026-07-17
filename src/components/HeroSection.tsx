@@ -40,9 +40,12 @@ export function HeroSection() {
           Independent nonprofit organisation <span>•</span> Uganda
         </p>
         <h1>
-          A <em>dignified life</em>
-          <br />
-          for every refugee.
+          <span className="hero-organisation">Ineza Refugees Initiative</span>
+          <span className="hero-promise">
+            A <em>dignified life</em>
+            <br />
+            for every refugee.
+          </span>
         </h1>
         <p className="hero-lede">
           Ineza Refugees Initiative works alongside refugee and host communities
