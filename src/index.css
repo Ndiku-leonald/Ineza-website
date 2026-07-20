@@ -230,6 +230,22 @@ button:focus-visible {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
+.nav-links .nav-staff-mail {
+  min-height: 38px;
+  padding: 0 0.9rem;
+  border: 1px solid rgba(23, 63, 53, 0.28);
+  border-radius: 999px;
+  color: var(--forest);
+}
+.nav-links .nav-staff-mail:hover {
+  border-color: var(--forest);
+  background: rgba(23, 63, 53, 0.07);
+  text-decoration: none;
+}
+.nav-links .nav-staff-mail:active,
+.nav-links .nav-donate:active {
+  transform: translateY(1px);
+}
 .nav-links .nav-donate {
   padding: 0 1.15rem;
   border-radius: 999px;
@@ -297,7 +313,11 @@ button:focus-visible {
   color: #241a14;
   text-decoration: none;
 }
-.mobile-dropdown a:last-child {
+.mobile-dropdown .mobile-staff-mail {
+  color: var(--forest);
+  font-weight: 600;
+}
+.mobile-dropdown .mobile-donate {
   border: 0;
   color: var(--forest);
   font-weight: 600;

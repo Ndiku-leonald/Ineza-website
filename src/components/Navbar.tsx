@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { navigation } from "../data/navigation";
 import { ProvisionalBrandMark } from "./ProvisionalBrandMark";
+
+const ZOHO_MAIL_SIGN_IN =
+  "https://accounts.zoho.com/signin?servicename=VirtualOffice&signupurl=https://www.zoho.com/mail/signup.html&serviceurl=https://mail.zoho.com";
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
@@ -27,6 +31,9 @@ export function Navbar() {
             {item.label}
           </a>
         ))}
+        <a className="nav-staff-mail" href={ZOHO_MAIL_SIGN_IN}>
+          Staff Mail
+        </a>
         <a className="nav-donate" href="/donate">
           Donate
         </a>
@@ -55,7 +62,14 @@ export function Navbar() {
             {item.label}
           </a>
         ))}
-        <a href="/donate" onClick={() => close()}>
+        <a
+          className="mobile-staff-mail"
+          href={ZOHO_MAIL_SIGN_IN}
+          onClick={() => close()}
+        >
+          Staff Mail
+        </a>
+        <a className="mobile-donate" href="/donate" onClick={() => close()}>
           Donate for Refugees
         </a>
       </div>
