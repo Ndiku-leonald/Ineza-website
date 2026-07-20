@@ -252,6 +252,26 @@ button:focus-visible {
   background: var(--forest);
   color: white;
 }
+.mobile-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.mobile-nav-staff {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.85rem;
+  border: 1px solid rgba(23, 63, 53, 0.38);
+  border-radius: 999px;
+  color: var(--forest);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.mobile-nav-staff:hover {
+  background: rgba(23, 63, 53, 0.07);
+}
 .menu-toggle {
   position: relative;
   width: 44px;
@@ -865,7 +885,8 @@ footer {
     display: flex;
   }
   .menu-toggle,
-  .mobile-dropdown {
+  .mobile-dropdown,
+  .mobile-nav-actions {
     display: none;
   }
   .about-section {

@@ -34,6 +34,19 @@ test("desktop navigation scrolls to programmes", async ({ page, isMobile }) => {
     .click();
   await expect(page).toHaveURL(/\/programmes$/);
 });
+test("staff button is visible and links to Zoho Mail", async ({ page }) => {
+  await page.goto("/");
+  const staffLink = page
+    .getByRole("navigation", { name: "Primary" })
+    .getByRole("link", { name: /Staff(?: Mail)?/, exact: true })
+    .filter({ visible: true })
+    .first();
+  await expect(staffLink).toBeVisible();
+  await expect(staffLink).toHaveAttribute(
+    "href",
+    "https://accounts.zoho.com/signin?servicename=VirtualOffice&signupurl=https://www.zoho.com/mail/signup.html&serviceurl=https://mail.zoho.com",
+  );
+});
 for (const route of [
   "/about",
   "/programmes",

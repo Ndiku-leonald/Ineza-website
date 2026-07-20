@@ -38,17 +38,22 @@ export function Navbar() {
           Donate
         </a>
       </div>
-      <button
-        ref={button}
-        className={`menu-toggle ${open ? "is-open" : ""}`}
-        aria-expanded={open}
-        aria-controls="mobile-menu"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-        <i></i>
-        <i></i>
-      </button>
+      <div className="mobile-nav-actions">
+        <a className="mobile-nav-staff" href={ZOHO_MAIL_SIGN_IN}>
+          Staff
+        </a>
+        <button
+          ref={button}
+          className={`menu-toggle ${open ? "is-open" : ""}`}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          onClick={() => setOpen(!open)}
+        >
+          <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+          <i></i>
+          <i></i>
+        </button>
+      </div>
       <div
         ref={menu}
         id="mobile-menu"
